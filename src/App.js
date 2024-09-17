@@ -4,6 +4,7 @@ import './App.css';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
 import Results from './components/Results';
+import About from './components/About'; // Import the About component
 
 function App() {
   const [allCards, setAllCards] = useState([]);
@@ -94,7 +95,7 @@ function App() {
               setSelectedSubtype={setSelectedSubtype}
               selectedRarity={selectedRarity}
               setSelectedRarity={setSelectedRarity}
-              handleSearch={handleSearch} // Pass handleSearch function
+              handleSearch={handleSearch}
             />
           } />
           <Route path="/results" element={
@@ -114,6 +115,7 @@ function App() {
               setSelectedRarity={setSelectedRarity}
             />
           } />
+          <Route path="/about/:cardId" element={<About />} /> {/* Add this route */}
         </Routes>
       </div>
     </Router>

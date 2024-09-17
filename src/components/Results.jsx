@@ -4,6 +4,7 @@ import { faSpinner } from '@fortawesome/free-solid-svg-icons';
 import SkeletonCard from "./SkeletonCard";
 import SearchBar from './SearchBar';
 import Filters from './Filters';
+import { Link } from 'react-router-dom'; // Import Link component
 
 const Results = ({
   loading, filteredCards,
@@ -43,10 +44,10 @@ const Results = ({
       {!loading && filteredCards && filteredCards.length > 0 && (
         <div className="results">
           {filteredCards.map((card) => (
-            <div key={card.id} className="card">
+            <Link key={card.id} to={`/about/${card.id}`} className="card">
               <img src={card.images.small} alt={card.name} />
               <p>{card.name}</p>
-            </div>
+            </Link>
           ))}
         </div>
       )}
