@@ -394,3 +394,55 @@ SKELETON ABOUT
   margin-bottom: 10px;
   border-radius: 4px;
 }
+
+/*
+
+RESPONSIVENESS
+
+*/
+
+@media (max-width: 768px) {
+  .card {
+    flex: 1 1 calc(50% - 10px);
+    max-width: calc(50% - 10px);
+  }
+
+  .home h1 {
+    font-size: 30px;
+  }
+
+  nav h1 {
+    font-size: 40px;
+  }
+
+  .container {
+    padding: 10px;
+  }
+
+  .home-content {
+    margin-bottom: 20%;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    flex: 1 1 calc(100% - 10px);
+    max-width: calc(100% - 10px);
+  }
+
+  .home h1 {
+    font-size: 24px;
+  }
+
+  nav h1 {
+    font-size: 32px;
+  }
+
+  nav img {
+    width: 100px;
+  }
+
+  .home-content {
+    margin-bottom: 25%;
+  }
+}
